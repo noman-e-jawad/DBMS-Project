@@ -1,0 +1,136 @@
+.rectangle {
+    height: 30px;
+    width: 100%;
+    background-color: rgba(38, 93, 195, 0.653);
+  }
+  .text_of_headers{
+    padding-left: 30px;
+    font-size: 20px;
+    color: white;
+  }
+  .course_outline_head{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    table-layout: fixed;
+  }
+  th, td {
+    border:2px solid black;
+    width: 100%;
+    text-align: left;
+    padding: px;
+  }
+  .course_description{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .course_objective{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .course_policy{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .academic_dishonesty{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .student_with_disability_and_stress{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .non_discremination_policy{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .course_content{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .course_learning_outcome_matrix{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .lesson_planning_with_mapping_of_CLO{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .assessment_and_evaluation{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .grades{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+  .referance_book{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 320px;
+      margin-right: 320px;
+      width: 60%;
+      height: 100%;
+  }
+
+  .course-title{
+    width:100%;
+    border: none;
+  }
+
+.text-area{
+    width:100%;
+}
+  
