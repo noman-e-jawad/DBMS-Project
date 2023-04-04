@@ -8,8 +8,14 @@ body {
   color: #3a3f4f;
   height: 100vh;
   background-color: #e8e9f3;
+  background-image: url("LOGO.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
+.dash-body {
+  background-size: 15%;
+  background-position: 95% 50%;
+}
 .nav {
   height: 70px;
   width: 100%;
@@ -80,7 +86,57 @@ body {
   padding: 7px;
   margin-left: 5px;
 }
+.col ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #20a4f3;
+  text-decoration: none;
+}
 
+.col ul li a:hover {
+  color: #a5243d;
+}
+.studentID {
+  padding: 10px 20px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #20a4f3;
+  color: #3a3f4f;
+  margin: 0 10px;
+}
+.btn-submit {
+  padding: 12px 22px;
+  background-color: #20a4f3;
+  color: #e8e9f3;
+  border: none;
+}
+.btn-submit:focus {
+  outline: none;
+}
+.viewButton {
+  padding: 10px 20px;
+  background-color: #20a4f3;
+  border-radius: 5px;
+  color: #e8e9f3;
+  border: none;
+  margin: 0 10px;
+  text-transform: capitalize;
+}
+.viewButton:focus-visible,
+.viewButton:focus {
+  outline: none;
+}
+.select-input {
+  padding: 12px 22px;
+  border: none;
+  color: black;
+}
+.select-input:focus-visible {
+  outline: none;
+}
+.min-h-700px {
+  min-height: 600px;
+}
 @media (max-width: 750px) {
   .nav > .nav-btn {
     display: inline-block;

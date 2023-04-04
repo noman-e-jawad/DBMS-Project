@@ -19,47 +19,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <style>
-    body {
-      background-image: url('LOGO.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: 15%;
-      background-position: top right;
-      background-color: #E8E9F3;
-    }
-  </style>
-
 </head>
 
-<body>
-  <div class="nav">
-
-    <div class="nav-header">
-      <div class="nav-title">
-        SPMS 3.0
-      </div>
-    </div>
-
-    <div class="nav-links">
-      <ul>
-        <li><a href="#" target="_self">Dashboard</a></li>
-        <li><a href="ploAnalysis.php" target="_self">PLO Analysis</a></li>
-        <li><a href="ploAchieveStats.php" target="_self">PLO Achievement Stats</a></li>
-        <li><a href="spiderChart.php" target="_self">Spider Chart Analysis</a></li>
-        <li><a href="dataEntry.php" target="_self">Data Entry</a></li>
-        <li><a href="viewCourseOutline.php" target="_self">View course Outline</a></li>
-        <li><a href="enrollmentStatistics.php" target="_self">Enrollment Stats</a></li>
-        <li><a href="performanceStats.php" target="_self">GPA Analysis</a></li>
-        <li><a href="logout.php" target="_self">Logout</a></li>
-      </ul>
-    </div>
-  </div>
+<body class="dash-body">
+  <?php require_once './template/header.php' ?>
   <div class="p-3">
     <h1>Welcome to SPMS 4.0</h1>
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row pb-3">
       <div class="col">
         <h3>PLO Analysis</h3>
         <ul>
@@ -83,7 +51,7 @@
         </ul>
       </div>
     </div>
-    <div class="row">
+    <div class="row py-2">
       <div class="col">
         <h3>Exam</h3>
         <ul>
@@ -102,6 +70,32 @@
           <li><a href="VC/Dean/Head-wise">VC/Dean/Head-wise</a></li>
         </ul>
       </div>
+    </div>
+    <div class="row py-2">
+      <div class="col">
+        <h3>Course Outline</h3>
+        <ul>
+          <li><a href="createCourseOutline.php">Create Course Outline</a></li>
+          <li><a href="viewCourseOutline.php">View Course Outline</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Enrollment Stats</h3>
+        <ul>
+          <li><a href="enrollmentStatistics.php">View Enrollment Stats</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col">
+        <h3>
+          Spider Chart
+        </h3>
+        <ul>
+          <li><a href="spiderChart.php">Spider Chart Analysis</a></li>
+        </ul>
+      </div>
+
     </div>
   </div>
 
