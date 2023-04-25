@@ -58,9 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   <style>
     body {
-      background-image: url('LOGO.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
       background-size: 15%;
       background-position: top;
     }
@@ -69,7 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       margin-top: 15%;
       width: 30%;
     }
-
     .ID {
       font-size: 30px;
       border-radius: 10px;
@@ -84,46 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     .ID:focus-visible {
       outline: none;
-    }
-
-    .submitButton {
-      height: 46px;
-      width: 200px;
-      display: inline-block;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      background: #20A4F3;
-      font-size: 22px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      cursor: pointer;
-      font-weight: bold;
-      margin-left: 35%;
-      margin-top: 15px;
-      color: #E8E9F3
-    }
-
-    .submitButton:active {
-      opacity: 0.5;
-    }
-
-    .selectNew {
-      height: 46px;
-      width: 100%;
-      display: inline-block;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      background: #20A4F3;
-      font-size: 22px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      cursor: pointer;
-      font-weight: bold;
-      margin: 0px;
-      padding: 10px 20px;
-      color: #E8E9F3
     }
   </style>
 
@@ -145,8 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   <div class="d-flex justify-content-center align-items-center h-100">
     <div class="mainContainer">
-      <form action="login.php" method="post">
-        <div class="form-group d-flex justify-content-center">
+      <form action="login.php" method="post" class="d-flex justify-content-center flex-column align-items-center">
+        <div class="form-group w-100">
           <select name="userType" class="select selectNew">
             <option disabled selected>User Type</option>
             <option value="student">Student</option>
@@ -155,14 +111,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <option value="dean">Dean</option>
           </select>
         </div>
-        <div class="form-group d-flex justify-content-center">
+        <div class="form-group w-100">
           <input class="ID" type="text" name="ID" placeholder="Enter Your ID">
         </div>
-        <div class="form-group d-flex justify-content-center">
+        <div class="form-group w-100">
           <input class="ID" type="password" name="password" placeholder="Enter Your Password"><br>
         </div>
-
-        <input type="submit" name="submit" value="Login" class="submitButton">
+        <input type="submit" name="submit" value="Login" class="custom-btn">
       </form>
     </div>
   </div>

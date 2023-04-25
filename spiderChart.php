@@ -11,8 +11,7 @@ include 'connect.php';
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <title>Employee Dashboard</title>
 
@@ -65,37 +64,41 @@ include 'connect.php';
 
 <body class="dash-body">
   <?php require_once './template/header.php' ?>
-  <div class="p-3">
-    <h1>Spider Chart Analysis</h1>
-  </div>
+  <main>
+    <?php require_once './template/sidebar.php'; ?>
+    <div class="main">
+      <div class="p-3">
+        <h1>Spider Chart Analysis</h1>
+      </div>
 
-  <div class="container">
+      <div class="container">
 
-    <!-- div row-1 starts here -->
-    <div class="row justify-content-center align-items-center pb-4">
-      <form method="POST">
+        <!-- div row-1 starts here -->
+        <form method="POST" class="d-flex justify-content-center mb-5">
 
-        <input class="studentID" type="text" placeholder="Enter Student ID" name="studentID" />
+          <input class="custom-input-field mx-3" type="text" placeholder="Enter Student ID" name="studentID" />
 
-        <input class="btn-submit" type="submit" name="submit" value="Enter" />
+          <input class="custom-btn mx-3" type="submit" name="submit" value="Enter" />
 
-      </form>
-    </div> <!-- div row-1 ends here -->
+        </form>
+        <!-- div row-1 ends here -->
 
 
-    <!-- div row-2 -->
-    <div style="display:flex;justify-content:center;margin-bottom:10px;">
+        <!-- div row-2 -->
+        <div class="btn-row">
 
-      <button onclick="poView()" class="viewButton">view PO analysis</button>
-      <button onclick="coView()" class="viewButton">View CO analysis</button>
+          <button onclick="poView()" class="custom-btn">view PO analysis</button>
+          <button onclick="coView()" class="custom-btn">View CO analysis</button>
 
-    </div> <!-- div row-2 ends here -->
+        </div> <!-- div row-2 ends here -->
 
-    <div class="container d-flex justify-content-center align-items-center">
-      <canvas class="w-50 h-100 bg-transparent min-h-600px" id="myChart"></canvas>
-    </div> <!-- div row-3 ends here -->
+        <div class="container d-flex justify-content-center align-items-center">
+          <canvas class="w-50 h-100 bg-transparent min-h-600px" id="myChart"></canvas>
+        </div> <!-- div row-3 ends here -->
 
-  </div> <!-- background div ends here -->
+      </div> <!-- background div ends here -->
+    </div>
+  </main>
 
   <?php
   if (isset($_POST['submit'])) {
@@ -104,7 +107,6 @@ include 'connect.php';
 
 
   <script>
-
     function poView() {
       <?php
       $sql = "SELECT po.poNum AS poNum, 
@@ -127,7 +129,6 @@ include 'connect.php';
 
         array_push($po, "PO " . $data['poNum']);
         array_push($percent, $data['percent']);
-
       }
 
       ?>
@@ -190,7 +191,6 @@ include 'connect.php';
 
         array_push($co, "CO " . $data['coNum']);
         array_push($percent, $data['percent']);
-
       }
 
       ?>
@@ -231,8 +231,6 @@ include 'connect.php';
       });
 
     }
-
-
   </script>
 
 

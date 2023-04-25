@@ -13,8 +13,7 @@ include 'connect.php';
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="ES_semester_dropdown.css">
   <title>Student Enrollment Statistics Page</title>
@@ -28,32 +27,34 @@ include 'connect.php';
 
 <body class="dash-body">
   <?php require_once './template/header.php' ?>
-  <div class="p-3">
-    <h1>Enrollment Statistics</h1>
-  </div>
+  <main>
+    <?php require_once './template/sidebar.php'; ?>
+    <div class="main">
+      <div class="p-3">
+        <h1>Enrollment Statistics</h1>
+      </div>
 
-  <div class="container pb-3">
-    <form method="POST" class="d-flex justify-content-center align-items-center">
-      <select name="year" class="select-input w-25 mx-2">
-        <option disabled selected>Year</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-      </select>
-      <input class="btn-submit mx-2" type="submit" name="submit" value="Submit" />
-    </form>
-  </div>
-
-  <div class="container">
-    <div class="pb-4 d-flex justify-content-center align-items-center">
-      <button onclick="schoolWiseEnrollment()" class="btn-submit mx-2 ">School-wise</button>
-      <button onclick="departmentWiseEnrollment()" class="btn-submit mx-2 ">Department-wise</button>
-      <button onclick="programWiseEnrollment()" class="btn-submit mx-2 ">Program-wise</button>
+      <div class="container pb-3">
+        <form method="POST" class="d-flex justify-content-center align-items-center">
+          <select name="year" class="select selectNew">
+            <option disabled selected>Year</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+          </select>
+          <input class="custom-btn" type="submit" name="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="btn-row">
+        <button onclick="schoolWiseEnrollment()" class="custom-btn ">School-wise</button>
+        <button onclick="departmentWiseEnrollment()" class="custom-btn ">Department-wise</button>
+        <button onclick="programWiseEnrollment()" class="custom-btn ">Program-wise</button>
+      </div>
+      <div class="canvas">
+        <div id="piechart" style="width: 1000px; height: 530px; background-color:transparent;"></div>
+      </div>
     </div>
-    <div style="width:1000px; margin:auto; margin-top:20px;">
-      <div id="piechart" style="width: 1000px; height: 530px; background-color:transparent;"></div>
-    </div>
-  </div>
+  </main>
 
   <?php
   if (isset($_POST['submit'])) {
@@ -61,7 +62,6 @@ include 'connect.php';
   } ?>
 
   <script>
-
     function departmentWiseEnrollment() {
       <?php
 
@@ -73,8 +73,11 @@ include 'connect.php';
       $result = mysqli_query($con, $sql);
       ?>
 
-      google.charts.load('current', { 'packages': ['corechart'] });
+      google.charts.load('current', {
+        'packages': ['corechart']
+      });
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Department', 'Number'],
@@ -88,7 +91,11 @@ include 'connect.php';
           title: 'Student Enrollment Statistics'
         };
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, { backgroundColor: { fill: "#87CEFA" } },);
+        chart.draw(data, {
+          backgroundColor: {
+            fill: "#87CEFA"
+          }
+        }, );
       }
     }
 
@@ -106,8 +113,11 @@ include 'connect.php';
       $result = mysqli_query($con, $sql);
       ?>
 
-      google.charts.load('current', { 'packages': ['corechart'] });
+      google.charts.load('current', {
+        'packages': ['corechart']
+      });
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['School', 'Number'],
@@ -121,7 +131,11 @@ include 'connect.php';
           title: 'Student Enrollment Statistics'
         };
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, { backgroundColor: { fill: "#87CEFA" } },);
+        chart.draw(data, {
+          backgroundColor: {
+            fill: "#87CEFA"
+          }
+        }, );
       }
     }
 
@@ -136,8 +150,11 @@ include 'connect.php';
       $result = mysqli_query($con, $sql);
       ?>
 
-      google.charts.load('current', { 'packages': ['corechart'] });
+      google.charts.load('current', {
+        'packages': ['corechart']
+      });
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['ProgramName', 'Number'],
@@ -154,10 +171,13 @@ include 'connect.php';
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, { backgroundColor: { fill: "#87CEFA" } },);
+        chart.draw(data, {
+          backgroundColor: {
+            fill: "#87CEFA"
+          }
+        }, );
       }
     }
-
   </script>
 
 

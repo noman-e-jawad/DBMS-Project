@@ -7,14 +7,27 @@ body {
   font-family: "Montserrat";
   color: #3a3f4f;
   height: 100vh;
-  background-color: #e8e9f3;
-  background-image: url("LOGO.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #fff;
 }
-.dash-body {
-  background-size: 15%;
-  background-position: 95% 50%;
+main {
+  height: calc(100% - 70px);
+  display: flex;
+}
+.logo {
+  width: 80px;
+  height: 50px;
+  background-image: url(LOGO-white.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sidebar {
+  width: 350px;
+  background-color: #20a4f3;
+  padding: 20px;
+}
+.main {
+  width: calc(100% - 350px);
+  padding: 10px 20px;
 }
 .nav {
   height: 70px;
@@ -29,6 +42,8 @@ body {
 .nav > .nav-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav > .nav-header > .nav-title {
@@ -43,49 +58,25 @@ body {
   display: none;
 }
 
-.nav > .nav-links {
+.nav-links {
+  list-style-type: none;
   display: flex;
-  font-size: 18px;
-  align-items: center;
-}
-.nav > .nav-links > ul li a {
-  display: block;
-  padding: 0 8px;
-  color: #fff;
-  line-height: 40px;
-  font-size: 20px;
-  text-decoration: none;
-}
-.nav > .nav-links > ul {
-  padding: 0;
+  flex-direction: column;
+  font-size: 21px;
+  font-weight: 600;
   margin: 0;
-  list-style: none;
-  position: relative;
+  padding: 0;
 }
-.nav > .nav-links > ul li {
-  display: inline-block;
-  background-color: #20a4f3;
+.nav-links li {
+  margin: 10px 0;
 }
-.nav > .nav-links > ul li:hover {
-  background-color: #20adff;
-  border-radius: 5px;
+.nav-links li a {
+  color: #fff;
 }
-
 .nav > #nav-check {
   display: none;
 }
 
-.nav .nav-links ul a.icon {
-  margin-left: 80px;
-  margin-right: 10px;
-}
-
-.nav .nav-links ul a i {
-  background-color: #fff;
-  border-radius: 50px;
-  padding: 7px;
-  margin-left: 5px;
-}
 .col ul li a {
   font-size: 18px;
   font-weight: 500;
@@ -96,7 +87,37 @@ body {
 .col ul li a:hover {
   color: #a5243d;
 }
-.studentID {
+.custom-btn {
+  padding: 10px 20px;
+  background-color: #20a4f3;
+  border-radius: 5px;
+  color: #e8e9f3;
+  border: none;
+  margin: 0 10px;
+  text-transform: capitalize;
+  max-width: 330px;
+}
+.custom-btn:focus {
+  outline: none;
+}
+.selectNew {
+  height: 46px;
+  display: inline-block;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #20a4f3;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0px;
+  padding: 10px 20px;
+  color: #e8e9f3;
+  text-align: center;
+}
+.custom-input-field {
   padding: 10px 20px;
   background-color: transparent;
   outline: none;
@@ -104,6 +125,22 @@ body {
   color: #3a3f4f;
   margin: 0 10px;
 }
+.custom-input-field:active {
+  opacity: 0.5;
+}
+.custom-input-field:focus-visible {
+  outline: none;
+}
+.btn-row {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.canvas {
+  margin-top: 50px;
+  height: 500px;
+}
+
 .btn-submit {
   padding: 12px 22px;
   background-color: #20a4f3;
@@ -124,14 +161,6 @@ body {
 }
 .viewButton:focus-visible,
 .viewButton:focus {
-  outline: none;
-}
-.select-input {
-  padding: 12px 22px;
-  border: none;
-  color: black;
-}
-.select-input:focus-visible {
   outline: none;
 }
 .min-h-700px {
@@ -293,28 +322,6 @@ body {
 .row2 {
   background-color: #155977;
 }
-
-.select {
-  padding: 8px, 12px;
-  width: 150px;
-  height: 36px;
-  margin-left: 44.5%;
-  margin-top: 18px;
-  color: black;
-  background-color: #6698ff;
-  border: 1px solid;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-  text-align: center;
-  color: white;
-}
-
 select option {
   background-color: #20a4f3;
   letter-spacing: 2px;
