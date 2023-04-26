@@ -125,6 +125,9 @@ main {
   color: #3a3f4f;
   margin: 0 10px;
 }
+.bg-blue {
+  background-color: #20a4f3;
+}
 .custom-input-field:active {
   opacity: 0.5;
 }
@@ -327,4 +330,14 @@ select option {
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 14px;
+}
+.question-form {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mark {
+  background-color: white;
+  border: none;
 }

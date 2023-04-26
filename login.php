@@ -58,6 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   <style>
     body {
+      background-image: url('LOGO.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       background-size: 15%;
       background-position: top;
     }
@@ -65,21 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     .mainContainer {
       margin-top: 15%;
       width: 30%;
-    }
-    .ID {
-      font-size: 30px;
-      border-radius: 10px;
-      border: none;
-      text-align: center;
-      width: 100%;
-    }
-
-    .ID:active {
-      opacity: 0.5;
-    }
-
-    .ID:focus-visible {
-      outline: none;
     }
   </style>
 
@@ -102,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <div class="d-flex justify-content-center align-items-center h-100">
     <div class="mainContainer">
       <form action="login.php" method="post" class="d-flex justify-content-center flex-column align-items-center">
-        <div class="form-group w-100">
+        <div class="form-group w-100 text-center">
           <select name="userType" class="select selectNew">
             <option disabled selected>User Type</option>
             <option value="student">Student</option>
@@ -111,13 +99,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <option value="dean">Dean</option>
           </select>
         </div>
-        <div class="form-group w-100">
-          <input class="ID" type="text" name="ID" placeholder="Enter Your ID">
+        <div class="form-group w-100 text-center">
+          <input class="custom-input-field" type="text" name="ID" placeholder="Enter Your ID">
         </div>
-        <div class="form-group w-100">
-          <input class="ID" type="password" name="password" placeholder="Enter Your Password"><br>
+        <div class="form-group w-100 text-center">
+          <input class="custom-input-field" type="password" name="password" placeholder="Enter Your Password"><br>
         </div>
-        <input type="submit" name="submit" value="Login" class="custom-btn">
+        <input type="submit" name="submit" value="Login" class="custom-btn w-100">
       </form>
     </div>
   </div>
