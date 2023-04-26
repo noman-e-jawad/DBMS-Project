@@ -12,6 +12,7 @@ ob_start();
         <li><a href="viewCourseOutline.php" target="_self">View course Outline</a></li>
         <li><a href="enrollmentStatistics.php" target="_self">Enrollment Stats</a></li>
         <li><a href="performanceStats.php" target="_self">GPA Analysis</a></li>
+        <li><a href="upload.php">Data Upload</a></li>
         <li><a href="logout.php" target="_self">Logout</a></li>
     </ul>
 </div>
